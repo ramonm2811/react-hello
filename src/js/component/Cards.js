@@ -1,7 +1,5 @@
-import React, { Fragment, useState } from "react";
-import { NavBar } from "./NavBar";
-import { Jumbotron } from "./Jumbotron.jsx";
-import { Cards } from "./Cards";
+import React, { useState } from "react";
+import { Card } from "./Card";
 
 const sampleData = [
 	{
@@ -26,18 +24,20 @@ const sampleData = [
 	}
 ];
 
-const Home = () => {
+export const Cards = () => {
 	const [cards, setCards] = useState(sampleData);
+
+	const switchCards = () => {
+		setCards([]);
+	};
+
 	return (
-		<>
-			<NavBar></NavBar>
-			<Jumbotron
-				title={"A Warm Welcome"}
-				description={"lorem wekjfnksjenflkesanfkjwenfdnasekdnfkjlwsn"}
-			/>
-			<Cards></Cards>
-		</>
+		<div className="container">
+			<div className="row">
+				{cards.map((card, index) => {
+					return <Card info={card} key={index}></Card>;
+				})}
+			</div>
+		</div>
 	);
 };
-
-export default Home;
