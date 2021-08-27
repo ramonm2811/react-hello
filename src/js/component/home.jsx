@@ -1,25 +1,35 @@
-import React from "react";
+import React, { Fragment, useState } from "react";
+import { NavBar } from "./NavBar";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+const sampleData = [
+	{
+		title: "First Card",
+		description:
+			"Some quick example text to build on the card title and make up the bulk of the cards content."
+	},
+	{
+		title: "Another Card",
+		description:
+			"Some quick example text to build on the card title and make up the bulk of the cards content."
+	},
+	{
+		title: "Third Card",
+		description:
+			"Some quick example text to build on the card title and make up the bulk of the cards content."
+	},
+	{
+		title: "Awesome Card",
+		description:
+			"Some quick example text to build on the card title and make up the bulk of the cards content."
+	}
+];
 
-//create your first component
 const Home = () => {
+	const [cards, setCards] = useState(sampleData);
 	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
+		<>
+			<NavBar></NavBar>
+		</>
 	);
 };
 
