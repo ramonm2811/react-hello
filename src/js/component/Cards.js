@@ -32,7 +32,7 @@ export const Cards = () => {
 	};
 
 	return (
-		<div className="container">
+		<div className="container mb-5">
 			<div className="row">
 				{cards.map((card, index) => {
 					return <Card info={card} key={index}></Card>;

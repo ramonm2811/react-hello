@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import { NavBar } from "./NavBar";
 import { Jumbotron } from "./Jumbotron.jsx";
 import { Cards } from "./Cards";
+import { Footer } from "./Footer";
 
 const sampleData = [
 	{
@@ -36,6 +37,10 @@ const Home = () => {
 				description={"lorem wekjfnksjenflkesanfkjwenfdnasekdnfkjlwsn"}
 			/>
 			<Cards></Cards>
+			<Footer
+				icons={["facebook", "twitter", "instagram"]}
+				copyright="Hola Mundo"
+			/>
 		</>
 	);
 };
