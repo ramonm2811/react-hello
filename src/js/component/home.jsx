@@ -1,17 +1,41 @@
-import React from "react";
+import React, { Fragment, useState } from "react";
+import { NavBar } from "./NavBar";
+import { Jumbotron } from "./Jumbotron.jsx";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+const sampleData = [
+	{
+		title: "First Card",
+		description:
+			"Some quick example text to build on the card title and make up the bulk of the cards content."
+	},
+	{
+		title: "Another Card",
+		description:
+			"Some quick example text to build on the card title and make up the bulk of the cards content."
+	},
+	{
+		title: "Third Card",
+		description:
+			"Some quick example text to build on the card title and make up the bulk of the cards content."
+	},
+	{
+		title: "Awesome Card",
+		description:
+			"Some quick example text to build on the card title and make up the bulk of the cards content."
+	}
+];
 
-//create your first component
+const Home = () => {
+	const [cards, setCards] = useState(sampleData);
+	return (
+		<>
+			<NavBar></NavBar>
+			<Jumbotron
+				title={"A Warm Welcome"}
+				description={"lorem wekjfnksjenflkesanfkjwenfdnasekdnfkjlwsn"}
+			/>
+		</>
+	);
+};
 
-const Jumbotron = () => {
-	return <div className="jumbotron">
-	<h1 className="display-4">Hello, world!</h1>
-	<p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-	<hr className="my-4">
-	<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-	<a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </div>
-}
-
+export default Home;
