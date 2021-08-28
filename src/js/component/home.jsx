@@ -34,12 +34,18 @@ const Home = () => {
 			<NavBar></NavBar>
 			<Jumbotron
 				title={"A Warm Welcome"}
-				description={"lorem wekjfnksjenflkesanfkjwenfdnasekdnfkjlwsn"}
+				description={
+					"It uses utility classes for typography and spacing to space content out within the larger container."
+				}
+				button={"Click Me"}
+				buttonURL={
+					"https://files.slack.com/files-pri/T0BFXMWMV-F028ZUX37NZ/image.png"
+				}
 			/>
 			<Cards></Cards>
 			<Footer
 				icons={["facebook", "twitter", "instagram"]}
-				copyright="Hola Mundo"
+				copyright="Copyright Your Website 2021"
 			/>
 		</>
 	);

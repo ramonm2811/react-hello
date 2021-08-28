@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const Card = ({ info }) => {
 	return (
-		<div className="col-3">
+		<div className="col-12 col-md-3 my-3">
 			<div className="card">
 				<img
 					className="card-img-top"
@@ -13,7 +13,9 @@ export const Card = ({ info }) => {
 				<div className="card-body">
 					<h5 className="card-title">{info?.title}</h5>
 					<p className="card-text">{info?.description}</p>
-					<a href="#" className="btn btn-primary">
+					<a
+						href="https://files.slack.com/files-pri/T0BFXMWMV-F028ZUX37NZ/image.png"
+						className="btn btn-primary">
 						Go somewhere
 					</a>
 				</div>
